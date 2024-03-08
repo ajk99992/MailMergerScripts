@@ -2,10 +2,10 @@
 Import-Module MSAL.PS
 
 # Load the EWS Managed API DLL
-Import-Module "C:\mailmerger\PowerShell-EWS-Scripts\Legacy\Microsoft.Exchange.WebServices.dll"
+Import-Module "C:\Mailmigration\Microsoft.Exchange.WebServices.dll"
 
 # Set Exchange service
-$service = New-Object Microsoft.Exchange.WebServices.Data.ExchangeService([Microsoft.Exchange.WebServices.Data.ExchangeVersion]::Exchange2013_SP1)
+$service = New-Object Microsoft.Exchange.WebServices.Data.ExchangeService([Microsoft.Exchange.WebServices.Data.ExchangeVersion]::Exchange2016)
 $service.Url = New-Object System.Uri("https://outlook.office365.com/EWS/Exchange.asmx")
 # Set credentials for OAuth
 $clientId = "f53893b2-fb1d-41f5-ac6f-d68e90235012"
